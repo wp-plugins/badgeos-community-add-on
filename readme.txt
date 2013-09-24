@@ -1,10 +1,10 @@
 === BadgeOS Community Add-on ===
-Contributors: credly, webdevstudios, Messenlehner, rzen, williamsba1, LisaSabinWilson
+Contributors: credly, webdevstudios, Messenlehner, rzen, williamsba1, LisaSabinWilson, tw2113
 Donate link: http://badgeos.org/contribute/donate/
 Tags: badge, badges, openbadges, credly, OBI, mozilla, open badges, achievement, award, reward, engagement, submission, nomination, buddypress, community, API, open credit, credit, bbpress, plugin
-Requires at least: WordPress 3.5, BuddyPress 1.7 & BadgeOS 1.0.2
+Requires at least: WordPress 3.5, BuddyPress 1.7 & BadgeOS 1.2
 Tested up to: 3.5.1
-Stable tag: 1.0.2
+Stable tag: 1.1.0
 License: GNU AGPLv3
 License URI: http://www.gnu.org/licenses/agpl-3.0.html
 
@@ -14,7 +14,7 @@ Adds BadgeOS features to BuddyPress and bbPress. Earn badges based on community 
 
 The "BadgeOS Community Add-on" integrates BadgeOS features into BuddyPress and bbPress. Site members complete achievements and earn badges based on a range of community activity and triggers. This add-on to BadgeOS also includes the ability to display badges and achievements on user profiles and activity feeds.
 
-**Note:** You will need to install the free [BadgeOS plugin](http://wordpress.org/extend/plugins/badgeos/ "BadgeOS")&trade; (version 1.0.2 or higher) to use the BadgeOS Community Add-on. You will also need the [BuddyPress plugin](http://wordpress.org/extend/plugins/buddypress/ "BadgeOS") v1.7 or higher installed.
+**Note:** You will need to install the free [BadgeOS plugin](http://wordpress.org/extend/plugins/badgeos/ "BadgeOS")&trade; (version 1.2 or higher) to use the BadgeOS Community Add-on. You will also need the [BuddyPress plugin](http://wordpress.org/extend/plugins/buddypress/ "BadgeOS") v1.7 or higher installed.
 
 [Get the BadgeOS plugin](http://wordpress.org/extend/plugins/badgeos/ "BadgeOS").
 
@@ -100,7 +100,7 @@ In addition to all of the out-of-the-box features in BadgeOS core, this add-on a
 BadgeOS is made available by [Credly, LLC](https://credly.com/ "Credly web site"). Here are some ways to stay connected and to see what else we are up to:
 
 * [BadgeOS.org](http://badgeos.org/ "BadgeOS web site") - Contact Us, Video Tutorials, Examples, News
-* [Credly.com](https://credly.com/ "Credly web site") - Recognize, manage and share lifelong achievement
+* [Credly.com](https://credly.com/ "Credly web site") - Manage lifelong credentials that matter
 * [Credly Knowledgebase](http://support.credly.com/ "Credly FAQ and Support") - Credly FAQ
 * [Facebook](https://www.facebook.com/Credly "Credly on Facebook") - Credly on Facebook
 * [Twitter](https://twitter.com/credly "Credly on Facebook") - Credly Tweets
@@ -164,6 +164,9 @@ Thanks for asking!  Please do share back code modifications or enhancements you 
 
 == Changelog ==
 
+= 1.1.0 =
+* New: Show all achievements from across a multisite network in member profile
+
 = 1.0.2 =
 * Fix: Fixed bug that prevented unlocking achievements attached to unlocked steps.
 * Fix: Check if group component is turned on before querying groups.
@@ -178,6 +181,18 @@ Thanks for asking!  Please do share back code modifications or enhancements you 
 
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+* New: Show all achievements from across a multisite network in member profile
+
+= 1.0.2 =
+* Fix: Fixed bug that prevented unlocking achievements attached to unlocked steps.
+* Fix: Check if group component is turned on before querying groups.
+
+= 1.0.1 =
+* New: Added .po and .mo files for internationalization
+* Updated: Check for BadgeOS version 1.0.2 or higher before activating plugin.
+* Fix: Stomped out a bug that prevented certain community triggers from unlocking steps
 
 = 1.0 =
 * Initial release
