@@ -34,11 +34,18 @@ add_action( 'init', 'badgeos_bp_load_community_triggers' );
  *
  * @since 1.0.0
  */
-function badgeos_bp_trigger_event() {
-
+function badgeos_bp_trigger_event( $args = '' ) {
 	// Setup all our important variables
 	global $user_ID, $blog_id, $wpdb;
+
+	if ( empty( $user_ID ) && 'bp_core_activated_user' == current_filter() )
+		$user_ID = absint( $args );
+
 	$user_data = get_user_by( 'id', $user_ID );
+
+	// Sanity check, if we don't have a user object, bail here
+	if ( ! is_object( $user_data ) )
+		return $args[ 0 ];
 
 	// Grab the current trigger
 	$this_trigger = current_filter();
@@ -47,7 +54,7 @@ function badgeos_bp_trigger_event() {
 	$new_count = badgeos_update_user_trigger_count( $user_ID, $this_trigger, $blog_id );
 
 	// Mark the count in the log entry
-	badgeos_post_log_entry( null, $user_ID, null, sprintf( __( "%1$s triggered %2$s (%3$dx)", 'badgeos-community' ), $user_data->user_login, $this_trigger, $new_count ) );
+	badgeos_post_log_entry( null, $user_ID, null, sprintf( __( '%1$s triggered %2$s (%3$dx)', 'badgeos-community' ), $user_data->user_login, $this_trigger, $new_count ) );
 
 	// Now determine if any badges are earned based on this trigger event
 	$triggered_achievements = $wpdb->get_results( $wpdb->prepare(
