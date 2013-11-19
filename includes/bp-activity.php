@@ -94,13 +94,13 @@ function badgeos_bp_custom_metaboxes( array $meta_boxes ) {
 		'fields'     => array(
 			array(
 				'name' => __( 'Activity Posts', 'badgeos-community' ),
-				'desc' => ' '.__( 'When a user earns any achievements of this type create an activity entry on their profile.', 'badgeos-community' ),
+				'desc' => ' ' . __( 'When a user earns any achievements of this type create an activity entry on their profile.', 'badgeos-community' ),
 				'id'   => $prefix . 'create_bp_activty',
 				'type' => 'checkbox',
 			),
 			array(
 				'name' => __( 'Profile Achievements', 'badgeos-community' ),
-				'desc' => ' '.__( 'Display earned achievements of this type in the user profile "Achievements" section.', 'badgeos-community' ),
+				'desc' => ' ' . __( 'Display earned achievements of this type in the user profile "Achievements" section.', 'badgeos-community' ),
 				'id'   => $prefix . 'show_bp_member_menu',
 				'type' => 'checkbox',
 			),

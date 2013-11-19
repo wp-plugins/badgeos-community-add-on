@@ -4,7 +4,7 @@ Donate link: http://badgeos.org/contribute/donate/
 Tags: badge, badges, openbadges, credly, OBI, mozilla, open badges, achievement, award, reward, engagement, submission, nomination, buddypress, community, API, open credit, credit, bbpress, plugin
 Requires at least: WordPress 3.5, BuddyPress 1.7 & BadgeOS 1.2
 Tested up to: 3.5.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GNU AGPLv3
 License URI: http://www.gnu.org/licenses/agpl-3.0.html
 
@@ -164,6 +164,10 @@ Thanks for asking!  Please do share back code modifications or enhancements you 
 
 == Changelog ==
 
+= 1.1.1 =
+* Fixed: Show community triggers when either BadgeOS, BuddyPress or this add-on are activated network-wide.
+* Updated: Show Achievements menu in BuddyPress profile even if no achievements have been earned on a single network site.
+
 = 1.1.0 =
 * New: Show all achievements from across a multisite network in member profile
 
@@ -181,6 +185,10 @@ Thanks for asking!  Please do share back code modifications or enhancements you 
 
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+* Fixed: Show community triggers when either BadgeOS, BuddyPress or this add-on are activated network-wide.
+* Updated: Show Achievements menu in BuddyPress profile even if no achievements have been earned on a single network site.
 
 = 1.1.0 =
 * New: Show all achievements from across a multisite network in member profile
