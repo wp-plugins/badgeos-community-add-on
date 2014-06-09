@@ -4,7 +4,7 @@
  *
  * @package BadgeOS Community
  * @subpackage Members
- * @author Credly, LLC
+ * @author LearningTimes, LLC
  * @license http://www.gnu.org/licenses/agpl.txt GNU AGPL v3.0
  * @link https://credly.com
  */
@@ -25,7 +25,6 @@ function bagdeos_bp_member_achievements() {
  * @since 1.0.0
  */
 function bagdeos_bp_member_achievements_content() {
-	global $bp;
 
 	$achievement_types = badgeos_get_network_achievement_types_for_user( bp_displayed_user_id() );
 	// Eliminate step cpt from array
@@ -84,8 +83,8 @@ add_action( 'bp_init', 'badgeos_community_loader', 1 );
 function badgeos_bp_core_general_settings_before_submit() {
 	$credly_user_enable = get_user_meta( bp_displayed_user_id(), 'credly_user_enable', true );?>
 	<label for="credly"><?php _e( 'Badge Sharing', 'badgeos-community' ); ?></label>
-	<input type="checkbox" value="true" <?php checked( $credly_user_enable, 'true' ); ?> name="credly_user_enable">
-	<?php echo _e( 'Send eligible earned badges to Credly', 'badgeos-community' );
+	<input id="credly" type="checkbox" value="true" <?php checked( $credly_user_enable, 'true' ); ?> name="credly_user_enable">
+	<?php _e( 'Send eligible earned badges to Credly', 'badgeos-community' );
 }
 add_action( 'bp_core_general_settings_before_submit', 'badgeos_bp_core_general_settings_before_submit' );
 
@@ -137,7 +136,7 @@ class BadgeOS_Community_Members extends BP_Component {
 
 	// Member Profile Menu
 	public function setup_nav( $main_nav = '', $sub_nav = '' ) {
-		global $bp, $blog_id;
+
 		if ( ! is_user_logged_in() && ! bp_displayed_user_id() )
 			return;
 
