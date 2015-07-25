@@ -3,8 +3,8 @@ Contributors: learningtimes, badgeos, credly, webdevstudios, Messenlehner, rzen,
 Donate link: http://badgeos.org/contribute/donate/
 Tags: badge, badges, openbadges, credly, OBI, mozilla, open badges, achievement, award, reward, engagement, submission, nomination, buddypress, community, API, open credit, credit, bbpress, plugin
 Requires at least: WordPress 3.6.0, BuddyPress 1.7.0 & BadgeOS 1.4.0
-Tested up to: 3.9.1
-Stable tag: 1.2.0
+Tested up to: 4.2.2
+Stable tag: 1.2.1
 License: GNU AGPLv3
 License URI: http://www.gnu.org/licenses/agpl-3.0.html
 
@@ -103,8 +103,8 @@ BadgeOS is made available by [LearningTimes, LLC](http://www.learningtimes.com/ 
 * [LearningTimes](http://www.learningtimes.com "LearningTimes web site") - Producers of online learning events, programs and applications
 * [Credly.com](https://credly.com/ "Credly web site") - Issue, manage, share and collect lifelong credentials and digital badges
 * [Credly Knowledgebase](http://support.credly.com/ "Credly FAQ and Support") - Credly FAQ
-* [Facebook](https://www.facebook.com/learningtimes "LearningTimes on Facebook") - LearningTimes on Facebook
-* [Twitter](https://twitter.com/learningtimes "LearningTimes on Twitter") - LearningTimes Tweets
+* [Facebook](https://www.facebook.com/Credly "Credly on Facebook") - Credly on Facebook
+* [Twitter](https://twitter.com/credly "Credly on Facebook") - Credly Tweets
 * [E-Mailing List](https://http://badgeos.org/join-list/ "BadgeOS Occasional Mailing List - No spam!") - Occasional updates via e-mail
 * [GitHub](https://github.com/opencredit/badgeos "BadgeOS on GitHub") - Report issues, contribute code
 
@@ -165,6 +165,17 @@ Thanks for asking!  Please do share back code modifications or enhancements you 
 
 == Changelog ==
 
+= 1.2.1 =
+* Fixed: Prevent activity list items from being flagged as spam due to too many links.
+* Fixed: Hide frontend profile "Send to Credly" checkbox if Credly integration is disabled.
+* Fixed: Add checks for BuddyPress or bbPress being enabled before able to enable Community Add-on.
+* Fixed: Prevent render issues in Steps UI when BuddyPress isn't activated.
+* Fixed: Renamed bagdeos_bp_member_achievements filter to badgeos_bp_member_achievements to fix typo.
+* Fixed: Textdomain path should now load translations more accurately.
+* Fixed: Changed calls from add_action to add_filter to match hook type.
+* Fixed: Pass in trigger, site ID, and args into earned achievement check.
+* Fixed: Create our own groups_join_specific_group action to allow for awarding of that available trigger.
+
 = 1.2.0 =
 * New: Submission lists can now be filtered by Group ID.
 * New: Added filter badgeos_award_achievement_bp_activity_details for altering the BuddyPress activity stream data before insertion.
@@ -190,6 +201,17 @@ Thanks for asking!  Please do share back code modifications or enhancements you 
 
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+* Fixed: Prevent activity list items from being flagged as spam due to too many links.
+* Fixed: Hide frontend profile "Send to Credly" checkbox if Credly integration is disabled.
+* Fixed: Add checks for BuddyPress or bbPress being enabled before able to enable Community Add-on.
+* Fixed: Prevent render issues in Steps UI when BuddyPress isn't activated.
+* Fixed: Renamed bagdeos_bp_member_achievements filter to badgeos_bp_member_achievements to fix typo.
+* Fixed: Textdomain path should now load translations more accurately.
+* Fixed: Changed calls from add_action to add_filter to match hook type.
+* Fixed: Pass in trigger, site ID, and args into earned achievement check.
+* Fixed: Create our own groups_join_specific_group action to allow for awarding of that available trigger.
 
 = 1.2.0 =
 * New: Submission lists can now be filtered by Group ID.
